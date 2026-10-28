@@ -30,11 +30,10 @@ muse exec --model muse-wonder-full-1.0 --reasoning-effort high \
 ```
 
 Write the brief to a file outside the repo and run from the repo root. Do not
-pass
-`--yolo`, `--disable-sandbox`, or `--disable-approval`. If `muse exec --help`
-offers flags that turn off writes or shell commands, use them for review. If
-`muse` is missing, or it says the model does not exist or the account lacks
-access, report it. Do not swap in `muse-wonder-1.0`; it is a different model.
+pass `--yolo`, `--disable-sandbox`, or `--disable-approval`. If
+`muse exec --help` offers flags that turn off writes or shell commands, use
+them for review. If `muse` is missing, or it says the model does not exist or
+the account lacks access, report it. Do not swap in `muse-wonder-1.0`; it is a different model.
 
 Give each delegate the request and relevant context. For review or feedback,
 keep their work read-only. Collect their responses and summarize the useful
