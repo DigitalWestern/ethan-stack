@@ -1,4 +1,4 @@
-# tstack
+# ethan-stack
 
 The agent skills I use every day, cleaned up so anyone can use them. They work
 in Claude Code and Codex. Some use [T3 Code](https://github.com/pingdotgg/t3code)
@@ -29,9 +29,9 @@ Some skills call others. Install the ones they need too:
 ## Install
 
 ```bash
-git clone https://github.com/t3dotgg/tstack
-cp -R tstack/skills/* ~/.claude/skills/   # Claude Code
-cp -R tstack/skills/* ~/.codex/skills/    # Codex
+git clone https://github.com/digitalwestern/ethan-stack
+cp -R ethan-stack/skills/* ~/.claude/skills/   # Claude Code
+cp -R ethan-stack/skills/* ~/.codex/skills/    # Codex
 ```
 
 ## Requirements
