@@ -28,6 +28,25 @@ Some skills call others. Install the ones they need too:
 
 ## Install
 
+### Claude Code plugin
+
+```text
+/plugin marketplace add digitalwestern/ethan-stack
+/plugin install ethan-stack@ethan-stack
+```
+
+This installs every skill at once, so the skills that call each other all
+work. The plugin namespaces the skills, for example `/ethan-stack:full-send`,
+and saying the trigger phrase still works.
+
+### Any agent, with npx
+
+```bash
+npx skills add digitalwestern/ethan-stack
+```
+
+### Manual copy
+
 ```bash
 git clone https://github.com/digitalwestern/ethan-stack
 cp -R ethan-stack/skills/* ~/.claude/skills/   # Claude Code
