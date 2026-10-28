@@ -10,16 +10,31 @@ relevant checks. Give council the updated implementation; do not defer known
 fixes until reviews return. If the user wants to discard the implementation
 and explore new ideas, skip fixes to code being replaced.
 
-Bring in two delegates to help with the user's request, usually for review
-or feedback. Use one strong model from each of two different providers, at
+Bring in three delegates to help with the user's request, usually for review
+or feedback. Use one strong model from each of three different providers, at
 high reasoning effort. If the user's instructions name council members, use
-those. Otherwise pick the latest flagship model from each provider, for
-example Claude Opus and GPT Sol.
+those. Otherwise use Claude Opus, GPT Sol, and Muse Wonder Full
+(`muse-wonder-full-1.0`), picking the latest Claude Opus and GPT Sol.
 
 In T3 Code, use `orchestrator_capabilities` to resolve the models, then
 `delegate_task` to start one delegate per model in parallel. Elsewhere, use
-the harness's subagent tools. If you cannot reach two providers, or a named
-member is unavailable, report it instead of substituting.
+the harness's subagent tools. If you cannot reach a member, or a named member
+is unavailable, report it instead of substituting.
+
+Muse Wonder Full runs only in Meta's Muse Code CLI, not in the Model API. If
+`delegate_task` cannot run it, run it headless with Muse Code instead:
+
+```bash
+muse exec --model muse-wonder-full-1.0 --reasoning-effort high \
+  --prompt-file <brief file>
+```
+
+Write the brief to a file outside the repo and run from the repo root. Do not
+pass
+`--yolo`, `--disable-sandbox`, or `--disable-approval`. If `muse exec --help`
+offers flags that turn off writes or shell commands, use them for review. If
+`muse` is missing, or it says the model does not exist or the account lacks
+access, report it. Do not swap in `muse-wonder-1.0`; it is a different model.
 
 Give each delegate the request and relevant context. For review or feedback,
 keep their work read-only. Collect their responses and summarize the useful
@@ -41,6 +56,7 @@ Rounds: 2
 | --- | --- | --- |
 | Claude Opus | 7/10 | 9/10 |
 | GPT Sol | 8/10 | 10/10 |
+| Muse Wonder Full | 7/10 | 9/10 |
 ```
 
 If a delegate gives no score, write `no score`. Do not invent one.
