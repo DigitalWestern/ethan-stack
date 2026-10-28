@@ -11,7 +11,7 @@ not.
 |---|---|---|
 | `full-send` | "full send" | Takes a change to a merged PR with nobody watching: proves it, reviews it, files it, babysits it, merges it. |
 | `full-stop` | "full stop" | Same as `full-send`, but stops when the PR is ready for you to merge. |
-| `council` | "council" | Gets review from three models from different providers, and loops until they agree. |
+| `council` | "council" | Gets review from two models from different providers, and loops until they agree. |
 | `sol-loop` | "sol loop" | Reviews a change with GPT Sol in a loop until both agents agree. |
 | `file-pr` | "file a PR" | Files a short PR that leads with the problem, not an inventory of changes. |
 | `takeover` | "take over" | Finishes someone else's PR, branch, or agent thread, and keeps their credit. |
@@ -27,6 +27,25 @@ Some skills call others. Install the ones they need too:
 - `file-pr`, `babysit-pr`, and `modernize` use `leaving-pr-comments`.
 
 ## Install
+
+### Claude Code plugin
+
+```text
+/plugin marketplace add digitalwestern/ethan-stack
+/plugin install ethan-stack@ethan-stack
+```
+
+This installs every skill at once, so the skills that call each other all
+work. The plugin namespaces the skills, for example `/ethan-stack:full-send`,
+and saying the trigger phrase still works.
+
+### Any agent, with npx
+
+```bash
+npx skills add digitalwestern/ethan-stack
+```
+
+### Manual copy
 
 ```bash
 git clone https://github.com/digitalwestern/ethan-stack
