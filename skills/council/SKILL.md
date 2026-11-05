@@ -19,7 +19,8 @@ those. Otherwise use Claude Opus, GPT Sol, and Muse Wonder Full
 In T3 Code, use `orchestrator_capabilities` to resolve the models, then
 `delegate_task` to start one delegate per model in parallel. Elsewhere, use
 the harness's subagent tools. If you cannot reach a member, or a named member
-is unavailable, report it instead of substituting.
+is unavailable, report it instead of substituting, except for the
+DeepSeek fallback below.
 
 Muse Wonder Full runs only in Meta's Muse Code CLI, not in the Model API. If
 `delegate_task` cannot run it, run it headless with Muse Code instead:
@@ -34,6 +35,12 @@ pass `--yolo`, `--disable-sandbox`, or `--disable-approval`. If
 `muse exec --help` offers flags that turn off writes or shell commands, use
 them for review. If `muse` is missing, or it says the model does not exist or
 the account lacks access, report it. Do not swap in `muse-wonder-1.0`; it is a different model.
+
+If Muse Wonder Full is unavailable, use DeepSeek V4.1 Flash 1017
+(`deepseek-v4.1-flash-1017`) at max reasoning effort in its place. This is the
+one allowed substitution. In T3 Code it runs through OpenCode as
+`openrouter/deepseek/deepseek-v4.1-flash-1017` with variant `max`. Say in the
+summary and score table that DeepSeek stood in for Muse.
 
 Give each delegate the request and relevant context. For review or feedback,
 keep their work read-only. Collect their responses and summarize the useful
