@@ -38,8 +38,13 @@ the account lacks access, report it. Do not swap in `muse-wonder-1.0`; it is a d
 
 If Muse Wonder Full is unavailable, use DeepSeek V4.1 Flash 1017
 (`deepseek-v4.1-flash-1017`) at max reasoning effort in its place. This is the
-one allowed substitution. In T3 Code it runs through OpenCode as
-`openrouter/deepseek/deepseek-v4.1-flash-1017` with variant `max`. Say in the
+one allowed substitution. In T3 Code it runs through OpenCode, with variant
+`max`, under either model ID, whichever is available:
+
+- OpenCode Go: `opencode-go/deepseek-v4.1-flash`
+- OpenRouter: `openrouter/deepseek/deepseek-v4.1-flash-1017`
+
+Say in the
 summary and score table that DeepSeek stood in for Muse.
 
 Give each delegate the request and relevant context. For review or feedback,
