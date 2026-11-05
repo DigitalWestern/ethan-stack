@@ -44,8 +44,7 @@ one allowed substitution. In T3 Code it runs through OpenCode, with variant
 - OpenCode Go: `opencode-go/deepseek-v4.1-flash`
 - OpenRouter: `openrouter/deepseek/deepseek-v4.1-flash-1017`
 
-Say in the
-summary and score table that DeepSeek stood in for Muse.
+Say in the summary and score table that DeepSeek stood in for Muse.
 
 Give each delegate the request and relevant context. For review or feedback,
 keep their work read-only. Collect their responses and summarize the useful
