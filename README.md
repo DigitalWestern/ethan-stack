@@ -18,6 +18,11 @@ not.
 | `babysit-pr` | "babysit" | Watches a PR through CI and review bots, and fixes the real findings. |
 | `modernize` | "modernize" | Rebases an old PR and decides if it should still exist. |
 | `leaving-pr-comments` | (automatic) | Formats comments that an agent posts on your behalf. |
+| `grill-me` | `/grill-me` | Shortcut that starts `grilling`. |
+| `grilling` | "grill me" | Interviews you hard about a plan or idea until nothing is left assumed. |
+| `handoff` | "handoff" | Writes a handoff doc so a fresh agent can pick up the work. |
+| `writing-for-agents` | (automatic) | Rules for writing prompts, skills, and AGENTS.md files that agents follow. |
+| `wait-what` | "wait what" | Re-explains the last message in plain words. |
 
 Some skills call others. Install the ones they need too:
 
@@ -72,4 +77,6 @@ skills without losing them.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE). `grill-me`, `grilling`, `handoff`, `writing-for-agents`, and `wait-what`
+are adapted from [mattpocock/skills](https://github.com/mattpocock/skills)
+(MIT, see [LICENSE-mattpocock](LICENSE-mattpocock)).
