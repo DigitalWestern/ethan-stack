@@ -10,7 +10,7 @@
     {
       "name": "ethan-stack",
       "source": "./",
-      "description": "Everyday agent skills for shipping PRs: full-send, full-stop, council, sol-loop, file-pr, takeover, babysit-pr, modernize, and leaving-pr-comments.",
+      "description": "Everyday agent skills for shipping PRs and planning work: full-send, full-stop, council, sol-loop, file-pr, takeover, babysit-pr, modernize, leaving-pr-comments, grill-me, grilling, handoff, writing-for-agents, and wait-what.",
       "category": "productivity",
       "tags": ["github", "pull-requests", "code-review", "ci", "skills"]
     }
