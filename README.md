@@ -69,6 +69,21 @@ cp -R ethan-stack/skills/* ~/.codex/skills/    # Codex
   [Muse Code](https://dev.meta.ai/docs/muse-code) CLI (`muse`), signed in on a
   plan that includes Wonder Full (Power Usage or Maximum Usage).
 
+## Global instructions
+
+`global/AGENTS.md` is the global instruction file I give every agent.
+`global/CLAUDE.md` is a symlink to it. To use it on a new machine:
+
+```bash
+mkdir -p ~/.agent-config ~/.claude ~/.codex
+cp ethan-stack/global/AGENTS.md ~/.agent-config/AGENTS.md
+ln -sf ~/.agent-config/AGENTS.md ~/.claude/CLAUDE.md
+ln -sf ~/.agent-config/AGENTS.md ~/.codex/AGENTS.md
+```
+
+The live copy is `~/.agent-config/AGENTS.md`, synced between my machines by
+Syncthing. The copy here is a snapshot. Refresh it after editing the live one.
+
 ## Make them yours
 
 These are starting points. Edit them. Put personal settings, like which models
